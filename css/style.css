@@ -51,7 +51,7 @@ a:focus {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: #ac9eb8;
     background: #0f1d28;
     border: 2px solid transparent;
     border-radius: 0;
@@ -62,7 +62,7 @@ a:focus {
 }
 
 .btn:hover {
-    color: #EF233C;
+    color: #ac9eb8;
     background: transparent;
     box-shadow: inset 0 0 0 0 #0f1d28;
     border-color: #0f1d28;
@@ -212,16 +212,16 @@ a:focus {
 
 .hero .hero-btn .btn {
     margin-top: 35px;
-    color: #ffffff;
+    color: #ac9eb8;
     background: #0f1d28;
     box-shadow: inset 0 0 0 50px #0f1d28;
 }
 
 .hero .hero-btn .btn:hover {
-    color: #ffffff;
+    color: #0f1d28;
     background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
+    box-shadow: inset 0 0 0 0 #ac9eb8;
+    border-color: #0f1d28;
 }
 
 .hero .hero-btn .btn:first-child {
