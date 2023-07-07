@@ -38,8 +38,8 @@ element.addEventListener("click", start);
 
 function start() {
     document.getElementById("start").style.visibility="hidden";
-    document.getElementById("album").style.visibility="visible";
-    document.getElementById("song").style.visibility="visible";
+    document.getElementById("album-select").style.visibility="visible";
+    document.getElementById("song-select").style.visibility="visible";
       // Typed Initiate
       if ($('.hero .hero-text h2').length == 1) {
         var typed_strings = ",You will now be given, 20 words of a random song, Try to guess the song's title!";

@@ -374,7 +374,7 @@ a:focus {
     visibility: hidden;
     color: #0f1d28;
     background-color: #ac9eb8;
-    min-width: 25vw;
+    min-width: 10vw;
     margin-top: 15px;
     margin-right: 15px;
     border-width: 3px;
