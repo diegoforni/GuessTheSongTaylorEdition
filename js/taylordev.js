@@ -138,15 +138,18 @@ function selectSong(){
       console.log("Selected song matches the random song!");
       counter = counter + 1;
       document.getElementById("counter").innerHTML = counter;
+      selectSong()
     } else {
       counter = 0;
       document.getElementById("counter").innerHTML = counter;
       console.log("Selected song does not match the random song.");
+      selectSong()
     }
+
   }
 
   // Add event listener to the button
-  checkButton.addEventListener("click", checkSelectedSong);
+  checkButton.addEventListener("click", checkSelectedSong,);
 
 
 }
