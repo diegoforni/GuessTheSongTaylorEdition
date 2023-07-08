@@ -160,7 +160,69 @@ function selectSong(){
       }
 
     } else {
-      let errorMessage = `,Wow,${counter} score`;
+      let errorMessage
+      switch (counter){
+        case 0:
+          errorMessage = `,Really?,${counter}, let's blame the game`;
+          break;
+        case 1:
+          errorMessage = `,${counter} Point, I know you can do a lot better than that`;
+          break;
+        case 2:
+          errorMessage = `,${counter} Points, thats kind of disapointing`;
+          break;
+        case 3:
+          errorMessage = `,${counter} Points, are you starting to get the hang of it?`;
+          break;
+        case 4:
+          errorMessage = `${counter}... Te puse`;
+          break;
+        case 5:
+          errorMessage = `${counter} Points, thats a special number...`;
+          break;
+        case 6:
+          errorMessage = `${counter} Points, you are getting the hang of it`;
+          break;
+        case 7:
+          errorMessage = `${counter} Points, That's good!`;
+          break;
+        case 8:
+          errorMessage = `${counter} Points, I guess can't get much better than this`;
+          break;
+        case 9:
+          errorMessage = `${counter} Points, You did great!`;
+          break;
+        case 10:
+          errorMessage = `${counter} Points! Thats fucking cool!`;
+          break;
+        case 11:
+          errorMessage = `${counter} ;)` ;
+          break;
+        case 12:
+          errorMessage = `${counter} Points! Keep going! `;
+          break;
+        case 13:
+          errorMessage = `${counter} Points, You can blame the unlucky number`;
+          break;
+        case 14:
+          errorMessage = `${counter} Points! That's my girl!`;
+          break;
+        case 15:
+          errorMessage = `${counter} Points! You are on fire!`;
+          break;
+        case 16:
+          errorMessage = `${counter} Points! Thats so good that you shoud probably take a break`;
+          break;
+        case 17:
+          errorMessage = `${counter} Points! Not gonna lie, Thats impressive`;
+          break;
+        case 18:
+          errorMessage = `${counter} Points! YOU ARE SO CLOSE!, congrats!`;
+          break;
+        case 19:
+          errorMessage = `${counter}! OMG, HOW DID YOU DO THAT???`;
+          break;
+      }
         // Typed Initiate
       if ($('.hero .hero-text h2').length == 1) {
         var typed_strings =  errorMessage;
