@@ -432,6 +432,7 @@ function selectSong(){
           errorMessage = `${counter}! OMG, HOW DID YOU DO THAT???`;
           break;
       }
+      errorMessage = errorMessage + ` , It was ${randomSong.name}`
         // Typed Initiate
       if ($('.hero .hero-text h2').length == 1) {
         var typed_strings =  errorMessage;
@@ -449,7 +450,7 @@ function selectSong(){
       console.log("Selected song does not match the random song.");
       setTimeout(() => {
         selectSong();
-      }, 12000);
+      }, 14000);
     }
 
   }
