@@ -2,6 +2,7 @@ const element = document.getElementById("start");
 element.addEventListener("click", start);
 var counter = 0
 let words = 20
+let randomSong;
 
 function start() {
     document.getElementById("start").style.visibility="hidden";
@@ -45,7 +46,7 @@ const data = [
 // Get reference to the album select element
 const albumSelect = document.getElementById("album-select");
 // Get reference to the song select element
-const songSelect = document.getElementById("song-select");
+let songSelect = document.getElementById("song-select");
 
 // Add a default option to the album select element
 const defaultAlbumOption = document.createElement("option");
@@ -91,7 +92,7 @@ function selectSong(){
 
   // Selecting a random song from the album
   const randomSongIndex = Math.floor(Math.random() * randomAlbum.songs.length);
-  const randomSong = randomAlbum.songs[randomSongIndex];
+  randomSong = randomAlbum.songs[randomSongIndex];
 
   // Splitting the lyrics into words
   const lyricsWords = randomSong.lyrics.split(" ");
@@ -127,8 +128,11 @@ function selectSong(){
   
   console.log(`Song: ${randomSong.name} (from the album: ${randomAlbum.album})`);
 
+
+
+}
   // Get references to the select element and the button
-  const songSelect = document.getElementById("song-select");
+  songSelect = document.getElementById("song-select");
   const checkButton = document.getElementById("check-button");
 
   // Function to check if the selected song matches the random song
@@ -147,9 +151,3 @@ function selectSong(){
     }
 
   }
-
-  // Add event listener to the button
-  checkButton.addEventListener("click", checkSelectedSong,);
-
-
-}
