@@ -1,7 +1,6 @@
 const element = document.getElementById("start");
 element.addEventListener("click", start);
 var counter = 0
-let words = 20
 let randomSong;
 
 function start() {
@@ -98,10 +97,10 @@ function selectSong(){
   const lyricsWords = randomSong.lyrics.split(" ");
 
   // Selecting a random starting point for the consecutive words
-  const randomStartIndex = Math.floor(Math.random() * (lyricsWords.length - words));
+  const randomStartIndex = Math.floor(Math.random() * (lyricsWords.length - ( 20 - counter)));
 
   
-  const randomWordCount = words;
+  const randomWordCount = 20 - counter;
 
   // Retrieving the consecutive words from the lyrics
   const randomWords = lyricsWords.slice(randomStartIndex, randomStartIndex + randomWordCount);
@@ -141,13 +140,44 @@ function selectSong(){
     if (selectedSongName === randomSong.name) {
       console.log("Selected song matches the random song!");
       counter = counter + 1;
-      document.getElementById("counter").innerHTML = counter;
-      selectSong()
+      document.getElementById("counter").innerHTML ="Score: " + counter;
+      document.getElementById("words").innerHTML ="Words: " + (20 - counter);
+      if (counter === 20){
+        //win
+        if ($('.hero .hero-text h2').length == 1) {
+          var typed_strings =  ", There is no, fucking way, you mannaged to win, without cheating, either way, congrats!";
+          var typed = new Typed('.hero .hero-text h2', {
+              strings: typed_strings.split(','),
+              typeSpeed: 60,
+              backSpeed: 20,
+              loop: false,
+              showCursor: false
+          });
+        }
+      } else{
+        selectSong();
+      }
+
     } else {
+      let errorMessage = `,Wow,${counter} score`;
+        // Typed Initiate
+      if ($('.hero .hero-text h2').length == 1) {
+        var typed_strings =  errorMessage;
+        var typed = new Typed('.hero .hero-text h2', {
+            strings: typed_strings.split(','),
+            typeSpeed: 60,
+            backSpeed: 20,
+            loop: false,
+            showCursor: false
+        });
+      }
       counter = 0;
-      document.getElementById("counter").innerHTML = counter;
+      document.getElementById("counter").innerHTML ="Score: " + counter;
+      document.getElementById("words").innerHTML ="Words: " + (20 - counter);
       console.log("Selected song does not match the random song.");
-      selectSong()
+      setTimeout(() => {
+        selectSong();
+      }, 12000);
     }
 
   }
