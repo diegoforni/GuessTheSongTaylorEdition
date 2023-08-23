@@ -386,8 +386,3 @@ a:focus {
     border-width: 3px;
     border-color: #0f1d28;
 }
-.counter{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
